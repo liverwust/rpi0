@@ -1,0 +1,6 @@
+---
+roles:
+  - name: zjael.raspberry_pi
+    src: https://github.com/liverwust/raspberry_pi
+
+  - name: jnv.unattended-upgrades

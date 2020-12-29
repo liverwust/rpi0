@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: true
+
+  vars:
+    - locale: en_US.UTF-8
+    - timezone: America/New_York
+    - new_password: "{{ password_hash }}"
+    - hostname_prefix: rpi    # will be overridden
+    - packages:
+        - git
+        - lsb-release
+        - python-apt
+        - python3-apt
+        - tmux
+    - ssh_allow_password_ip_range: 10.17.44.*
+    - gpu_mem: 76
+    - disable_hdmi: false
+
+  roles:
+    - zjael.raspberry_pi
