@@ -19,3 +19,11 @@
 
   roles:
     - zjael.raspberry_pi
+    - dpms
+
+  post_tasks:
+    # https://github.com/raspberrypi-ui/piwiz/blob/master/src/piwiz.c
+    - name: Remove the piwiz autostart file to dismiss first-boot window
+      file:
+        path: /etc/xdg/autostart/piwiz.desktop
+        state: absent

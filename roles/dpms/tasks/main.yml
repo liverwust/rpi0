@@ -1,0 +1,19 @@
+---
+# tasks file for dpms
+# https://wiki.archlinux.org/index.php/Display_Power_Management_Signaling#Disabling_DPMS
+
+- name: Create intermediate directories
+  file:
+    path: /etc/X11/xorg.conf.d
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Delay screen blanking by configuring DPMS
+  template:
+    src:   etc/X11/xorg.conf.d/10-dpms.conf
+    dest: /etc/X11/xorg.conf.d/10-dpms.conf
+    owner: root
+    group: root
+    mode: 0644

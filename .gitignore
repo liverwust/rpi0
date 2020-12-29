@@ -2,7 +2,8 @@
 *.retry
 
 # Don't commit the randomized password
-.ansible-vault
+/.ansible-vault
 
 # From Ansible Galaxy (requirements.yml)
-roles/**
+/roles/*
+!/roles/dpms
