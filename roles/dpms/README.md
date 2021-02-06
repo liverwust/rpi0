@@ -13,8 +13,8 @@ Role Variables
 
 ```yaml
 ---
-# Seconds (for standby, delay, and off timers)
-dpms_delay_screen_off: 7200
+# Minutes (for standby, delay, and off timers)
+dpms_delay_screen_off: 120
 ```
 
 Dependencies
